@@ -57,10 +57,10 @@ const certificates: Certificate[] = [
   },
   {
     id: "decisions",
-    title: "Data Analysis with R Programming",
+    title: "Ask Questions to Make Data-Driven Decidions",
     filename: "data_driven_decisions_cert.pdf",
     color: "#00ACC1",
-    description: "R programming for advanced data analysis and modeling.",
+    description: "Learn how to ask effective questions, make data-driven decisions, and meet stakeholders’ needs.",
   },
 ];
 
