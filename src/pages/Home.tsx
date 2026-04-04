@@ -114,11 +114,9 @@ export default function Home() {
           <div className="absolute bottom-20 left-10 w-40 h-40 rounded-full blur-3xl opacity-20" style={{ backgroundColor: colors[1] }} />
 
           {/* Main heading */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6">
-            <span className="block">Some</span>
-            <span className="block" style={{ color: colors[0] }}>Stuff</span>
-            <span className="block">and a Few</span>
-            <span className="block" style={{ color: colors[1] }}>Things</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter mb-6 leading-tight">
+            <span className="block">Some Stuff</span>
+            <span className="block" style={{ color: colors[0] }}>and a Few Things</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
