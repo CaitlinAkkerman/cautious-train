@@ -1,0 +1,15 @@
+{
+  "name": "some-stuff-and-a-few-things",
+  "local_port": 50166,
+  "entrypoint": "bun run dev",
+  "publish": {
+    "label": "some-stuff-and-a-few-things",
+    "type": "http",
+    "entrypoint": "bun run prod",
+    "published_port": 50515,
+    "env": {
+      "NODE_ENV": "production",
+      "ZO_CLIENT_IDENTITY_TOKEN": "none"
+    }
+  }
+}
