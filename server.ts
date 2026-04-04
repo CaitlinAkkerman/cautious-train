@@ -19,7 +19,7 @@ app.get("/api/hello-zo", (c) => c.json({ msg: "Hello from Zo" }));
 // Serve certificate PDFs
 app.get("/api/certificates/:filename", async (c) => {
   const filename = c.req.param("filename");
-  const file = Bun.file(`/home/workspace/Google Certificates/${filename}`);
+  const file = Bun.file(`./api/certificates/${filename}`);
   
   if (!(await file.exists())) {
     return c.json({ error: "Certificate not found" }, 404);
