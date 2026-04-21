@@ -38,13 +38,43 @@ const projects: Project[] = [
   },
 ];
 
-function Modal({ project, onClose }: { project: Project; onClose: () => void }) {
+function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ backgroundColor: "rgba(0,0,0,0.75)", backdropFilter: "blur(4px)" }}
+      className="fixed inset-0 z-[60] flex items-center justify-center p-6"
+      style={{ backgroundColor: "rgba(0,0,0,0.92)", backdropFilter: "blur(8px)" }}
       onClick={onClose}
     >
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 p-2 rounded-lg hover:bg-white/10 transition-colors"
+      >
+        <X className="w-6 h-6 text-white" />
+      </button>
+      <img
+        src={src}
+        alt={alt}
+        className="rounded-xl shadow-2xl"
+        style={{ maxHeight: "90vh", maxWidth: "90vw" }}
+        onClick={(e) => e.stopPropagation()}
+      />
+    </div>
+  );
+}
+
+function Modal({ project, onClose }: { project: Project; onClose: () => void }) {
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+
+  return (
+    <>
+      {lightboxSrc && (
+        <Lightbox src={lightboxSrc} alt={project.title} onClose={() => setLightboxSrc(null)} />
+      )}
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center p-4"
+        style={{ backgroundColor: "rgba(0,0,0,0.75)", backdropFilter: "blur(4px)" }}
+        onClick={onClose}
+      >
       <div
         className="relative w-full max-w-2xl rounded-2xl border border-border/50 overflow-hidden"
         style={{ backgroundColor: "hsl(var(--background))" }}
@@ -82,8 +112,9 @@ function Modal({ project, onClose }: { project: Project; onClose: () => void }) 
                   key={i}
                   src={src}
                   alt={`${project.title} screenshot ${i + 1}`}
-                  className="rounded-xl w-full object-cover border border-border/30"
+                  className="rounded-xl w-full object-cover border border-border/30 cursor-zoom-in hover:opacity-90 transition-opacity"
                   style={{ maxHeight: "180px" }}
+                  onClick={(e) => { e.stopPropagation(); setLightboxSrc(src); }}
                 />
               ))}
             </div>
@@ -130,6 +161,7 @@ function Modal({ project, onClose }: { project: Project; onClose: () => void }) 
         </div>
       </div>
     </div>
+    </>
   );
 }
 
