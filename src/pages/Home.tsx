@@ -34,7 +34,7 @@ const projects: Project[] = [
     tags: ["React", "Firebase", "Auth"],
     color: "#4ECDC4",
     path: "/home/workspace/bill-tracker",
-    screenshots: [],
+    screenshots: ["/images/bill-tracker-1.png", "/images/bill-tracker-2.png"],
   },
 ];
 
