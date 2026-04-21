@@ -24,7 +24,7 @@ const projects: Project[] = [
     tags: ["React", "Node.js", "SQLite", "Full-Stack"],
     color: "#FF6B9D",
     path: "/home/workspace/Synced",
-    screenshots: ["/public/images/synced-1.png", "/public/images/synced-2.png"],
+    screenshots: ["/images/synced-1.png", "/images/synced-2.png"],
   },
   {
     id: "bill-tracker",
