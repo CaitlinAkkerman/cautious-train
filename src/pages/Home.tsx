@@ -27,10 +27,20 @@ const projects: Project[] = [
     screenshots: ["/images/synced-1.png", "/images/synced-2.png"],
   },
   {
+    id: "bill-tracker",
+    title: "Bill Tracker",
+    description: "React bill tracking app with Firebase Auth, partial payment support, and progress visualization. Dark, bold UI design.",
+    longDescription: "Bill Tracker is a React app that takes the stress out of managing monthly bills. It features Firebase authentication so your data stays secure, partial payment support for when you can only pay part of a bill, and progress visualization so you can see exactly where you stand at a glance. Built with a dark, bold UI that makes finances feel a little less miserable.",
+    tags: ["React", "Firebase", "Auth"],
+    color: "#4ECDC4",
+    path: "/home/workspace/bill-tracker",
+    screenshots: ["/images/bill-tracker-1.png", "/images/bill-tracker-2.png"],
+  },
+  {
     id: "mood-palette",
     title: "Mood Palette",
     description: "Click a mood and the whole page re-tints to match it. Type any feeling and it gets hashed into a unique palette. Includes copy buttons for hex, CSS variables, and keyboard shortcuts.",
-    longDescription: "Mood Palette is a color tool with 10 preset moods — including Existential Dread, Caffeinated, and Unearned Confidence — plus a text input that hashes any feeling into a consistent 5-color palette. The same word always gives the same colors. You can copy a single hex, all five, or the whole palette as CSS variables. Hit 1–5 to copy swatches by keyboard, or 'Surprise me' for a random mood.",
+    longDescription: "Mood Palette is a color tool with 10 preset moods — including Existential Dread, Caffeinated, and Unearned Confidence — plus a text input that hashes any feeling into a consistent 5-color palette. The same word always gives the same colors. You can copy a single hex, all five, or the whole palette as CSS variables. Hit 1–5 to copy swatches by keyboard, or Surprise me for a random mood.",
     tags: ["HTML", "CSS", "JavaScript"],
     color: "#FFE66D",
     path: "",
@@ -45,16 +55,6 @@ const projects: Project[] = [
     color: "#95E1D3",
     path: "",
     screenshots: [],
-  },
-  {
-    id: "bill-tracker",
-    title: "Bill Tracker",
-    description: "React bill tracking app with Firebase Auth, partial payment support, and progress visualization. Dark, bold UI design.",
-    longDescription: "Bill Tracker is a React app that takes the stress out of managing monthly bills. It features Firebase authentication so your data stays secure, partial payment support for when you can only pay part of a bill, and progress visualization so you can see exactly where you stand at a glance. Built with a dark, bold UI that makes finances feel a little less miserable.",
-    tags: ["React", "Firebase", "Auth"],
-    color: "#4ECDC4",
-    path: "/home/workspace/bill-tracker",
-    screenshots: ["/images/bill-tracker-1.png", "/images/bill-tracker-2.png"],
   },
 ];
 
