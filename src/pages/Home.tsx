@@ -44,7 +44,7 @@ const projects: Project[] = [
     tags: ["HTML", "CSS", "JavaScript"],
     color: "#FFE66D",
     path: "",
-    screenshots: [],
+    screenshots: ["/images/mood-1.png", "/images/mood-2.png", "/images/mood-3.png"],
   },
   {
     id: "guilt-trip",
@@ -54,7 +54,7 @@ const projects: Project[] = [
     tags: ["HTML", "CSS", "JavaScript"],
     color: "#95E1D3",
     path: "",
-    screenshots: [],
+    screenshots: ["/images/guilt-trip-1.png", "/images/guilt-trip-2.png", "/images/guilt-trip-3.png"],
   },
 ];
 
