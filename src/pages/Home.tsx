@@ -30,7 +30,7 @@ const projects: Project[] = [
     id: "bill-tracker",
     title: "Bright Budget",
     description: "A privacy-first budgeting app that tracks spending, debts, goals, and bills, built with React.",
-    longDescription: "BrightBudget is a privacy-first personal finance app built with React and Vite. It tracks budgets, debts, savings goals, and recurring bills, with spending trends and overspend warnings. All data stays in your browser.",
+    longDescription: "Bright Budget is a privacy-first personal finance app built with React and Vite. It tracks budgets, debts, savings goals, and recurring bills, with spending trends and overspend warnings. All data stays in your browser.",
     tags: ["React", "Firebase", "Auth"],
     color: "#4ECDC4",
     path: "/home/workspace/bill-tracker",
