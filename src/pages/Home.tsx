@@ -263,7 +263,7 @@ export default function Home() {
       )}
 
       {/* Hero Section */}
-      <section className="relative px-6 py-24 md:py-32 lg:py-40">
+      <section className="relative px-6 pt-24 pb-8 md:pt-32 md:pb-10 lg:pt-40 lg:pb-12">
         <div className="max-w-4xl mx-auto">
           <div className="absolute top-20 right-10 w-32 h-32 rounded-full blur-3xl opacity-30" style={{ backgroundColor: colors[0] }} />
           <div className="absolute bottom-20 left-10 w-40 h-40 rounded-full blur-3xl opacity-20" style={{ backgroundColor: colors[1] }} />
@@ -280,7 +280,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="px-6 py-16">
+      <section className="px-6 pt-8 pb-16">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-12">
             Selected Work
