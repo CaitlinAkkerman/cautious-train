@@ -28,9 +28,9 @@ const projects: Project[] = [
   },
   {
     id: "bill-tracker",
-    title: "Bill Tracker",
+    title: "Bright Budget",
     description: "React bill tracking app with Firebase Auth, partial payment support, and progress visualization. Dark, bold UI design.",
-    longDescription: "Bill Tracker is a React app that takes the stress out of managing monthly bills. It features Firebase authentication so your data stays secure, partial payment support for when you can only pay part of a bill, and progress visualization so you can see exactly where you stand at a glance. Built with a dark, bold UI that makes finances feel a little less miserable.",
+    longDescription: "Bright Budget is a React app that takes the stress out of managing monthly bills. It features Firebase authentication so your data stays secure, partial payment support for when you can only pay part of a bill, and progress visualization so you can see exactly where you stand at a glance. Built with a dark, bold UI that makes finances feel a little less miserable.",
     tags: ["React", "Firebase", "Auth"],
     color: "#4ECDC4",
     path: "/home/workspace/bill-tracker",
