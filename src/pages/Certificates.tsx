@@ -69,7 +69,7 @@ function CertificateCard({ cert, index }: { cert: Certificate; index: number }) 
 
   return (
     <Card
-      className="group relative overflow-hidden border-0 bg-transparent transition-all duration-300"
+      className="group relative flex h-full min-h-[240px] flex-col overflow-hidden border-0 bg-transparent transition-all duration-300"
       style={{
         transform: isHovered ? "translateY(-4px)" : "translateY(0)",
       }}
@@ -94,14 +94,14 @@ function CertificateCard({ cert, index }: { cert: Certificate; index: number }) 
 
       <CardHeader className="relative z-10 pb-2">
         <div className="flex items-center gap-3">
-          <Award className="w-8 h-8" style={{ color: cert.color }} />
-          <CardTitle className="text-xl font-bold tracking-tight">
+          <Award className="h-8 w-8 shrink-0" style={{ color: cert.color }} />
+          <CardTitle className="text-lg font-bold tracking-tight">
             {cert.title}
           </CardTitle>
         </div>
       </CardHeader>
 
-      <CardContent className="relative z-10">
+      <CardContent className="relative z-10 flex flex-1 flex-col">
         <p className="text-muted-foreground leading-relaxed mb-4">
           {cert.description}
         </p>
@@ -110,7 +110,7 @@ function CertificateCard({ cert, index }: { cert: Certificate; index: number }) 
           href={`/api/certificates/${cert.filename}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:opacity-80"
+          className="mt-auto inline-flex items-center gap-2 self-start text-sm font-medium transition-colors hover:opacity-80"
           style={{ color: cert.color }}
         >
           <ExternalLink className="w-4 h-4" />
@@ -138,7 +138,7 @@ export default function Certificates() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative px-6 py-16 md:py-24">
+      <section className="relative px-6 pt-16 pb-6 md:pt-24 md:pb-8">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <Award className="w-12 h-12 text-yellow-500" />
@@ -159,13 +159,13 @@ export default function Certificates() {
       </section>
 
       {/* Certificates Grid */}
-      <section className="px-6 py-12">
+      <section className="px-6 pt-6 pb-12">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-8">
             All Certificates ({certificates.length})
           </h2>
 
-          <div className="grid gap-6">
+          <div className="grid grid-cols-1 auto-rows-fr gap-4 md:grid-cols-2 lg:grid-cols-3">
             {certificates.map((cert, index) => (
               <CertificateCard key={cert.id} cert={cert} index={index} />
             ))}

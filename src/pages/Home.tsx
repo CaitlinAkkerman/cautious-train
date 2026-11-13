@@ -31,7 +31,7 @@ const projects: Project[] = [
     title: "Bright Budget",
     description: "A privacy-first budgeting app that tracks spending, debts, goals, and bills, built with React.",
     longDescription: "Bright Budget is a privacy-first personal finance app built with React and Vite. It tracks budgets, debts, savings goals, and recurring bills, with spending trends and overspend warnings. All data stays in your browser.",
-    tags: ["React", "Firebase", "Auth"],
+    tags: ["React", "Vite", "localStorage"],
     color: "#4ECDC4",
     path: "/home/workspace/bill-tracker",
     screenshots: ["/images/bill-tracker-1.png", "/images/bill-tracker-2.png", "/images/bill-tracker-3.png"],
@@ -190,7 +190,7 @@ function ProjectCard({ project, index, onClick }: { project: Project; index: num
 
   return (
     <Card
-      className="group relative overflow-hidden border-0 bg-transparent transition-all duration-300 cursor-pointer"
+      className="group relative flex h-full min-h-[240px] flex-col overflow-hidden border-0 bg-transparent transition-all duration-300 cursor-pointer"
       style={{ transform: isHovered ? "translateY(-8px)" : "translateY(0)" }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -211,13 +211,13 @@ function ProjectCard({ project, index, onClick }: { project: Project; index: num
         style={{ backgroundColor: project.color, width: isHovered ? "4px" : "2px" }}
       />
 
-      <CardHeader className="relative z-10 pb-2">
+      <CardHeader className="relative z-10 p-4 pb-1">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-4xl font-black" style={{ color: project.color }}>
+            <span className="text-2xl font-black" style={{ color: project.color }}>
               {String(index + 1).padStart(2, "0")}
             </span>
-            <CardTitle className="text-2xl font-bold tracking-tight">
+            <CardTitle className="text-lg font-bold tracking-tight">
               {project.title}
             </CardTitle>
           </div>
@@ -230,11 +230,11 @@ function ProjectCard({ project, index, onClick }: { project: Project; index: num
         </div>
       </CardHeader>
 
-      <CardContent className="relative z-10">
-        <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+      <CardContent className="relative z-10 flex flex-1 flex-col p-4 pt-0">
+        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
           {project.description}
         </p>
-        <div className="flex flex-wrap gap-2">
+        <div className="mt-auto flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <Badge
               key={tag}
@@ -281,11 +281,11 @@ export default function Home() {
 
       {/* Projects Section */}
       <section className="px-6 pt-8 pb-16">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-12">
-            Selected Work
+            Web Applications
           </h2>
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 auto-rows-fr md:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((project, index) => (
               <ProjectCard
                 key={project.id}
